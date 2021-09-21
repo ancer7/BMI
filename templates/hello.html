@@ -1,0 +1,69 @@
+<!DOCTYPE html>    
+<html lang="en">    
+    
+<head>    
+    <title>Python Flask Bucket List App</title>    
+    
+    <meta charset="utf-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+    
+    <link href="https://chromium.googlesource.com/external/github.com/twbs/bootstrap/+/v3.3.4/docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">    
+</head>    
+<body>    
+    <div class="container">    
+        <div class="header">    
+            <nav>    
+                <ul class="nav nav-pills pull-right">    
+                    <li role="presentation" class="active">    
+                        <a href="#">Home</a>    
+                    </li>    
+                       
+                </ul>    
+            </nav>    
+            <h3 class="text-muted">Python Hello App</h3>    
+        </div>    
+    
+        <div class="jumbotron">             
+    
+            <p>    
+                
+{%if value%}
+    <p><h2>Your BMI is <u><b>{{value}}</u> </b></h2>
+    </p>
+    
+     {% if value > 18.5 and  25 >= value %}
+            <p>Great. Maintain your current healthy weight.</p>
+
+            {%elif value > 16 and 18.5 > value %}
+            <p>You are underweight.</p>
+            <p>To get to the healthy you need to gain some weight.</p> 
+            
+            {%elif 16 > value %}
+            <p>You are severely underweight.</p>
+            <p>To get to the healthy you need to gain some weight.</p> 
+
+            {%elif value > 25 and 30 > value %}
+            <p>You are overweight.</p>
+            <p>To get to the healthy you need to lose some weight.</p> 
+
+            {% else%}
+            <p>You are severely overweight.</p>
+            <p>To get to the healthy you need to lose some weight.</p> 
+
+    {%endif%}
+    {%endif%} 
+
+            <br /> <a href="/">Back Home</a>    
+        </div>      
+    
+        <footer class="footer">    
+            <p>© Company Ancer 2021</p>    
+        </footer>    
+    
+    </div>    
+</body>    
+    
+</html>    
